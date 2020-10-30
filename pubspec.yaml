@@ -1,6 +1,7 @@
 name: get_proxy
 description: A flutter to get the proxy for a mobile device.
 version: 0.0.1
+repository: https://github.com/marcmcl/get_proxy
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
