@@ -1,8 +1,8 @@
 name: get_proxy
-description: A new flutter plugin project.
+description: A flutter to get the proxy for a mobile device.
 version: 0.0.1
-author:
-homepage:
+author: Marc McLaughlin
+homepage: https://github.com/marcmcl/get_proxy
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
