@@ -18,11 +18,12 @@
 }
 
 - (NSString*) getProxy {
-    // Not currently working so return nothing for now
-    return @"";
     @try {
       CFDictionaryRef dicRef = CFNetworkCopySystemProxySettings();
       const CFStringRef proxyCFstr = (const CFStringRef)CFDictionaryGetValue(dicRef, (const void*)kCFNetworkProxiesHTTPProxy);
+      if (proxyCFstr == nil) {
+        return @"";
+      }
       const CFNumberRef portCFnum = (const CFNumberRef)CFDictionaryGetValue(dicRef, (const void*)kCFNetworkProxiesHTTPPort);
       char buffer[4096];
       memset(buffer, 0, 4096);
